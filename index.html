@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Animation</title>
+    <link rel="icon" type="image/x-icon" href="images/power.png">
+</head>
+    <style>
+        @keyframes for-sun {
+            20%{
+                top: 0;
+                left: 0;
+            }
+            40%{
+                top: 0;
+                left: 400px;
+            }
+            60%{
+                top: 200px;
+                left: 400px;
+            }
+            80%{
+                top: 200px;
+                left: 0;
+            }
+            100%{
+                top: 100px;
+                left: 200px;
+            }
+        }
+        @keyframes for-moon {
+            20%{
+                top: -100px;
+                left: 400px;
+            }
+            40%{
+                top: 0;
+                left: 400px;
+            }
+            60%{
+                top: 100px;
+                left: 400px;
+            }
+            80%{
+                top: 100px;
+                left: 0;
+            }
+            100%{
+                top: -100px;
+                left: 0;
+            }
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .body{
+            /* margin: 0 auto; */
+            width: 500px;
+            height: 300px;
+            background-image: linear-gradient(360deg, #023047, #001524);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-image: linear-gradient(360deg, red, yellow);
+
+            position: relative;
+            top: 100px;
+            left: 200px;
+
+            animation: for-sun 4s linear 1s infinite;
+        }
+        .moon{
+            width: 100px;
+            height: 100px;
+
+            position: relative;
+            top: -100px;
+            left: 0;
+
+            animation: for-moon 4s linear .5s infinite;
+        }
+    </style>
+<body>
+    <div class="body">
+        <div class="circle"></div>
+        <img src="images/moon.png" alt="" class="moon">
+    </div>
+</body>
+</html>
